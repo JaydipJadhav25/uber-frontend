@@ -6,6 +6,12 @@ import Usersignup from "./pages/Usersignup";
 import Captionsignup from "./pages/Captionsignup";
 import Userprofile from "./pages/Userprofile";
 import Captionprofile from "./pages/Captionprofile";
+import Index from "./pages/Index";
+import UserProtedWrap from "./components/UserProtedWrap";
+import HomeProtedWrap from "./components/HomeProtedWrap";
+import Ridding from "./pages/Ridding";
+import CaptionHome from "./pages/CaptionHome";
+import CaptionRiding from "./pages/CaptionRiding";
 
 export default function App() {
   return (
@@ -18,7 +24,20 @@ export default function App() {
       <Route path="/captionlogin" element={<Captionlogin />} />
       <Route path="/captionsignup" element={<Captionsignup />} />
       <Route path="/captionprofile" element={<Captionprofile />} />
-      <Route path="*" element={<h1>Not Found</h1>} />
+      <Route path="/captionhome" element={<CaptionHome/>} />
+      <Route path="/captionhome" element={<CaptionHome/>} />
+      <Route path="/captionriding" element={<CaptionRiding/>} />
+      <Route path="/ride" element={<Ridding/>} />
+      <Route path="/home" element={<Index/>} />
+
+      {/* <Route path="/home" element={
+        <HomeProtedWrap>
+        <Index />
+        </HomeProtedWrap>
+
+      } /> */}
+
+      <Route path="*" element={<h1>Not Found Page </h1>} />
     </Routes>
       
   </>
